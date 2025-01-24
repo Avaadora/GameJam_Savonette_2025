@@ -9,7 +9,7 @@ public class SubFracture : MonoBehaviour
 
     public List<SubFracture> connections;
 
-    private SmartFracture parent;
+    [SerializeField] private SmartFracture parent;
 
     private void Start()
     {

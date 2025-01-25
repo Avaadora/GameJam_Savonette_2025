@@ -11,7 +11,12 @@ public class PropsHolder : MonoBehaviour
     {
         for (int i = 0; i < transform.childCount; i++)
         {
-            transform.GetChild(i).AddComponent<PropsFragment>(); // ajoute le script lié aux fragments, automatiquement à tout les fragments enfants
+            // ajoute le script lié aux fragments, automatiquement à tout les fragments enfants + tout ce qu'il a besoin pour collisionner
+            transform.GetChild(i).AddComponent<PropsFragment>();
+            transform.GetChild(i).AddComponent<MeshCollider>();
+            transform.GetChild(i).GetComponent<MeshCollider>().convex = true;
+            transform.GetChild(i).AddComponent<Rigidbody>();
+            transform.GetChild(i).GetComponent<MeshRenderer>().material = transform.GetComponent<MeshRenderer>().material;
         }
     }
 
@@ -20,12 +25,16 @@ public class PropsHolder : MonoBehaviour
         // gère le contact uniquement avec le player
         if (collision.transform.CompareTag("Player"))
         {
+            // supprime les éléments de l'objet unbroken
+            Destroy(transform.GetComponent<MeshRenderer>());
+            Destroy(transform.GetComponent<Rigidbody>());
+            Destroy(transform.GetComponent<MeshCollider>());
+
             // éxecute ce code pour tout les enfants (fragments)
             for (int i = 0; i < transform.childCount; i++)
             {
-                // active le collider, active le rb, ajoute une force pour propulcer le fragment, lance sa fonction d'initialisation, retire le fragment de cet objet
-                transform.GetChild(i).GetComponent<Collider>().enabled = true;
-                transform.GetChild(i).GetComponent<Rigidbody>().isKinematic = false;
+                // active le fragment, ajoute une force pour le propulcer, lance sa fonction d'initialisation, retire le fragment de cet objet
+                transform.GetChild(i).gameObject.SetActive(true);
                 transform.GetChild(i).GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(forceMin, forceMax), Random.Range(forceMin, forceMax), Random.Range(forceMin, forceMax)), ForceMode.Impulse);
                 transform.GetChild(i).GetComponent<PropsFragment>().InitializeFragment();
                 transform.GetChild(i).parent = null;

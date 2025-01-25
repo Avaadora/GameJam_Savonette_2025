@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     private int deuxEtoile;
     private int troisEtoile;
 
+    private CalculeScore unCalculeScore;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,17 +37,20 @@ public class GameManager : MonoBehaviour
     {
         if(resultat > uneEtoile && resultat < deuxEtoile)
         {
-
+            unCalculeScore.GetUneEtoileSpawn();
         }
         else
         {
             if(resultat< deuxEtoile && resultat < troisEtoile)
             {
-
+                unCalculeScore.GetDeuxEtoileSpawn();
             }
             else
             {
-
+                if (resultat >= troisEtoile)
+                {
+                    unCalculeScore.GetTroixEtoileSpawn();
+                }
             }
         }
     }

@@ -3,55 +3,32 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private List<int> points = new List<int>();
-    private List<int> objBroken = new List<int>();
+    private CalculeScore unCalculeScore;
+
+    public List<int> pointsPerObject = new List<int>();
+    public List<int> objectBrokenable = new List<int>();
 
     private int resultat;
-    private int resultatMax;
-    private int uneEtoile;
-    private int deuxEtoile;
-    private int troisEtoile;
-
-    private CalculeScore unCalculeScore;
+    public int resultatMax;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        resultatMax = objBroken.Count / points.Count;
-
-        uneEtoile = resultatMax / 3;
-        deuxEtoile = uneEtoile * 2;
-        troisEtoile = resultatMax;
-
-        for (int i = 0; i < points.Count; i++)
+        for(int i = 0; i < pointsPerObject.Count; i++)
         {
-            points[i - 1] = 0;
-            resultat = points[i-1] + points[i];
+            pointsPerObject[-1] = 0;
+            resultat = pointsPerObject[i - 1 + i];
         }
-        resultat = resultat / points.Count;
+        resultat = resultat * pointsPerObject.Count;
+        unCalculeScore.SetResultats(resultat);
 
+        resultatMax = objectBrokenable.Count * pointsPerObject.Count;
+        unCalculeScore.SetResultatsMax(resultatMax);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(resultat > uneEtoile && resultat < deuxEtoile)
-        {
-            unCalculeScore.GetUneEtoileSpawn();
-        }
-        else
-        {
-            if(resultat< deuxEtoile && resultat < troisEtoile)
-            {
-                unCalculeScore.GetDeuxEtoileSpawn();
-            }
-            else
-            {
-                if (resultat >= troisEtoile)
-                {
-                    unCalculeScore.GetTroixEtoileSpawn();
-                }
-            }
-        }
+
     }
 }

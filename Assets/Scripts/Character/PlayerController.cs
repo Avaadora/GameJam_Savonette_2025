@@ -1,4 +1,4 @@
-using System.Collections;
+//using System.Collections;
 using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection;
     private Rigidbody playerRigidbody;
 
-    [SerializeField] private GameObject myPrefab;
+    
 
     private void Start()
     {
@@ -102,11 +102,5 @@ public class PlayerController : MonoBehaviour
         canJump = true;
     }
 
-    private IEnumerator WaitIAmInTheBathroom()
-    {
-        var instance = Instantiate(myPrefab);
-        var instancePlaneObject = instance.GetComponent<DecalProjector>();           //Il faut trouver autre chose que NetworkObject
-        Instantiate(instancePlaneObject);
-        yield return new WaitForSeconds(2);
-    }
+    
 }

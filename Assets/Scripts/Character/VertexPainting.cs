@@ -27,8 +27,8 @@ public class VertexPainting : MonoBehaviour
             //myPlayerController.Update();
             for (int i = 0; i < myMesh.vertexCount; i++)
             {
-                new myMesh.vertexCount;
-                myMesh.GetVertexAttribute<VertexPainting>();
+                //new myMesh.vertexCount;
+                //myMesh.GetVertexAttribute<VertexPainting>();
             }
 
         }

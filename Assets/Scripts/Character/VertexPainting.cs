@@ -12,6 +12,8 @@ public class VertexPainting : MonoBehaviour
     private BoxCollider myBoxCollider;
     private Mesh myMesh;
 
+    public float Speed = 1f;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,10 +29,16 @@ public class VertexPainting : MonoBehaviour
             //myPlayerController.Update();
             for (int i = 0; i < myMesh.vertexCount; i++)
             {
-                //new myMesh.vertexCount;
-                //myMesh.GetVertexAttribute<VertexPainting>();
+                
             }
 
+            
+
+            /*if(myMesh.HasVertexAttribute() == myPlayerController.mesh.HasVertexAttribute)
+            { 
+                myPlayerController.Move(groundDrague);
+            }
+            myMesh.HasVertexAttribute();*/
         }
     }
 

@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: bee2ead27ee9afa24bef18aa9b003ff5
+AudioImporter:
+  externalObjects: {}
+  serializedVersion: 6
+  defaultSettings:
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 44100
+    compressionFormat: 1
+    quality: 1
+    conversionMode: 0
+  platformSettingOverrides: {}
+  forceToMono: 0
+  normalize: 1
+  preloadAudioData: 1
+  loadInBackground: 0
+  ambisonic: 0
+  3D: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192819
+  packageName: Reckless Punk-Metal Music Pack
+  packageVersion: 1.0
+  assetPath: Assets/Audio/Music/Reckless-punk-metal-pack/DavidKBD - Reckless Punk-Metal
+    Pack - 04 - Get Ready.ogg
+  uploadId: 426930

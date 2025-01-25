@@ -22,14 +22,14 @@ public class CalculeScore : MonoBehaviour
 
     public int SetResultats(int result)
     {
-        SetResultat = result;               // Récupère la valeur de résult dans SetResultat
-        return SetResultat;                 // Récupère la valeur de la scene vers un script qui est en dehors de la scene, en passant par le GameManager
+        SetResultat = result;                       // Récupère la valeur de résult dans SetResultat
+        return SetResultat;                         // Récupère la valeur de la scene vers un script qui est en dehors de la scene, en passant par le GameManager
     }
 
     public int SetResultatsMax(int resultMax)
     {
-        SetResultatMax = resultMax;         // Récupère la valeur de resultMax dans SetResultatMax
-        return SetResultatMax;              // Récupère la valeur de la scene vers un script qui est en dehors de la scene, en passant par le GameManager
+        SetResultatMax = resultMax;                 // Récupère la valeur de resultMax dans SetResultatMax
+        return SetResultatMax;                      // Récupère la valeur de la scene vers un script qui est en dehors de la scene, en passant par le GameManager
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -48,21 +48,21 @@ public class CalculeScore : MonoBehaviour
     void Update()
     {
         print(SetResultat);
-        if (GetResultat > uneEtoile && GetResultat < deuxEtoile)
+        if (GetResultat > uneEtoile && GetResultat < deuxEtoile)                // est ce que GetResultat est supérieure à 1etoile, mais inferieur à 2etoiles
         {
-            print("un");
+            print("un");                                                        // Jecrie 1
         }
         else
         {
-            if (GetResultat < deuxEtoile && GetResultat < troisEtoile)
+            if (GetResultat < deuxEtoile && GetResultat < troisEtoile)          // est ce que GetResultat est supérieure à 2etoile, mais inferieur à 3etoiles
             {
-                print("deux");
+                print("deux");                                                  // Jecrie 2
             }
             else
             {
-                if (GetResultat >= troisEtoile)
+                if (GetResultat >= troisEtoile)                                 // est ce que GetResultat est supérieure ou égale à 3etoile
                 {
-                    print("toix");
+                    print("toix");                                              // Jecrie 3
                 }
             }
         }

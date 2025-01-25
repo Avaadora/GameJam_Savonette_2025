@@ -20590,6 +20590,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BP_Horloge_Colored_Unbreakable
       objectReference: {fileID: 0}
+    - target: {fileID: 5164078823623928207, guid: 4e291a4a9462b3d4bb3d5a81d01f2af0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5924996803067714227, guid: 4e291a4a9462b3d4bb3d5a81d01f2af0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.968052
@@ -20852,7 +20856,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: BP_Toilettes_Colored_Breakable
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3847118874595887256, guid: 0c5c7fe474ab6584ea91912ce3f2c967, type: 3}
+    - {fileID: 3740824577072390927, guid: 0c5c7fe474ab6584ea91912ce3f2c967, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -23396,7 +23402,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190606812095827808}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.04131535, y: 0.0000000047289705, z: 1.9554602e-10, w: 0.99914616}
+  m_LocalRotation: {x: -0.041315448, y: 0.000000004728983, z: 1.9554702e-10, w: 0.99914616}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

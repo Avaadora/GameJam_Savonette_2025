@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _rigidbody.freezeRotation = true;
+        // _rigidbody.freezeRotation = true;
     }
 
 
@@ -36,11 +36,14 @@ public class PlayerController : MonoBehaviour
 
         PlayerMove();
         PlayerJump();
+
+        // application des forces
+        _rigidbody.AddForce(_moveDirection.normalized * _speed, ForceMode.Force);
     }
 
     private void PlayerMove() // gère les mouvements du player
     {
-        _moveDirection = (_orientation.forward * _verticalInput) + (_orientation.right * _horizontalInput); // get direction du player
+        _moveDirection = _orientation.forward * _verticalInput + _orientation.right * _horizontalInput; // get direction du player
 
         // gère la vélocité
         Vector3 flatVel = new (_rigidbody.linearVelocity.x, 0f, _rigidbody.linearVelocity.z);
@@ -49,24 +52,15 @@ public class PlayerController : MonoBehaviour
             Vector3 limitedVel = flatVel.normalized * _speed;
             _rigidbody.linearVelocity = new (limitedVel.x, _rigidbody.linearVelocity.y, limitedVel.z);
         }
-        if (_isGrounded)
-        {
-            _rigidbody.linearDamping = 5.0f;
-        }
-        else
-        {
-            _rigidbody.linearDamping = 0.0f;
-        }
-
-        // application des forces
-        _rigidbody.AddForce(_moveDirection.normalized * _speed, ForceMode.Force);
+        _rigidbody.linearDamping = _isGrounded ? 5.0f : 0.0f;
     }
 
     private void PlayerJump() // gère le saut du player
     {
-        if (!_isGrounded)
+        if (!_isGrounded) // si player dans les airs
         {
-            _moveDirection += (_moveDirection.y < 0 ? Physics.gravity * 3 : Physics.gravity) * Time.deltaTime;
+            _speed *= _airMultiplier; // modifier air control
+            _moveDirection += (_moveDirection.y < 0 ? Physics.gravity * 3 : Physics.gravity) * Time.deltaTime; // retomber plus vite
         }
 
         if (Input.GetButton("Jump") && _isGrounded && _canJump)

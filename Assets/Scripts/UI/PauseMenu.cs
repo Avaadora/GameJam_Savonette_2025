@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class louisPauseMenu : MonoBehaviour
+public class PauseMenu : MonoBehaviour
 {
 
     [SerializeField] private GameObject pauseMenuUI;

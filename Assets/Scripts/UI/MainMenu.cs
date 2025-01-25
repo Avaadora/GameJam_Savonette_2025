@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class louisOptions : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
     [SerializeField] private AudioMixer _mixer;
     [SerializeField] private Slider _musicSlider;
@@ -86,5 +87,15 @@ public class louisOptions : MonoBehaviour
         {
             Screen.fullScreenMode = FullScreenMode.Windowed;
         }
+    }
+
+    public void StartGame()
+    {
+        // SceneManager.LoadScene();
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

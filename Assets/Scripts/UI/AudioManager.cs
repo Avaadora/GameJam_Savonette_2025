@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class louisAudioManager : MonoBehaviour
+public class AudioManager : MonoBehaviour
 {
     [Header("Audio Source")]
     [SerializeField] private AudioSource _musicSource;

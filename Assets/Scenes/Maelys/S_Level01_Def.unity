@@ -9245,6 +9245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myPrefab: {fileID: 7873584807991246574, guid: a5f39af71f8f5854fa35abbbe32ad70b, type: 3}
+  ourPlayerController: {fileID: 1945018607181675283}
 --- !u!23 &6746575059841410537
 MeshRenderer:
   m_ObjectHideFlags: 0

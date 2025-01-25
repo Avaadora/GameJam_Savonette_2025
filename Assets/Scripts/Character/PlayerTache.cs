@@ -8,13 +8,13 @@ public class PlayerTache : MonoBehaviour
 
     private IEnumerator coroutine;
     private Transform followTarget;
-    //[SerializeField] private PlayerController ourPlayerController;
+    [SerializeField] private PlayerController ourPlayerController;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //followTarget = transform;
-        //followTarget = ourPlayerController.transform;
+        followTarget = ourPlayerController.transform;
         coroutine = WaitIAmInTheBathroom(2.0f);
         StartCoroutine(coroutine);
     }
@@ -28,8 +28,9 @@ public class PlayerTache : MonoBehaviour
     private IEnumerator WaitIAmInTheBathroom(float waitTime)
     {
         Instantiate(myPrefab);
-        //transform.position = followTarget.position;
+        myPrefab.transform.position = ourPlayerController.transform.position;
         yield return new WaitForSeconds(waitTime);
+        coroutine = WaitIAmInTheBathroom(2.0f);
         StartCoroutine(coroutine);
     }
 }

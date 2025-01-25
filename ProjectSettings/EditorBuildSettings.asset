@@ -8,12 +8,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Louis/louis_MainMenu.unity
     guid: 2fa48e0a95b44d24ab8fd5bd19b46fa2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Louis/louis_GamePlaceholder.unity
     guid: b1b6393da3b624d428d36836d08107ef
+  - enabled: 1
+    path: Assets/Scenes/S_MainMenu_Def.unity
+    guid: bccff5093992c8047bb3de0d80497896
+  - enabled: 1
+    path: Assets/Scenes/S_Level01_Def.unity
+    guid: a66837fc7b4785443997e21432075d30
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -1,17 +1,14 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-
-    [SerializeField] private GameObject pauseMenuUI;
+    [SerializeField] private GameObject pausePanel;
     private bool _isGamePaused = false;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Pause"))
         {
             if (_isGamePaused)
             {
@@ -26,13 +23,17 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        pauseMenuUI.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        pausePanel.SetActive(false);
         Time.timeScale = 1f;
         _isGamePaused = false;
     }
     public void Pause()
     {
-        pauseMenuUI.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        pausePanel.SetActive(true);
         Time.timeScale = 0f;
         _isGamePaused = true;
     }
@@ -40,16 +41,17 @@ public class PauseMenu : MonoBehaviour
     public void Restart()
     {
         Resume();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    public void BackToMenu()
+    public void MainMenu()
     {
         Resume();
-        SceneManager.LoadScene("louis_MainMenu");
+        SceneManager.LoadScene("S_MainMenu_Def");
     }
 
-    public void Quit()
+    public void Exit()
     {
         Application.Quit();
+        Debug.Log("Exit App");
     }
 } 

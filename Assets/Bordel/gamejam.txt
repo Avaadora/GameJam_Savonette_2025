@@ -13,7 +13,7 @@ air multiplier > control du mouvement dans les air
 
 
 
-props préfab:
+props préfab: (obsolet)
 prendre le prop et l'unpack dans la scène en 0 0 0
 mettre de coté le premier enfant et s'en servir comme base (holder)
 ajouter rigidbody avec les paramètres de base

@@ -13,17 +13,19 @@ public class MainMenu : MonoBehaviour
     private float _musicLastValue;
     private float _sfxLastValue;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
-        if (PlayerPrefs.HasKey("musicVolume"))
-        {
-            LoadVolume();
-        } else
-        {
-            ChangeMusicVolume();
-            ChangeSFXVolume();
-        }
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        //if (PlayerPrefs.HasKey("musicVolume"))
+        //{
+        //    LoadVolume();
+        //} else
+        //{
+        //    ChangeMusicVolume();
+        //    ChangeSFXVolume();
+        //}
     }
 
     public void ChangeMusicVolume()
@@ -91,11 +93,12 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        // SceneManager.LoadScene();
+        SceneManager.LoadScene("S_Level01_Def");
     }
 
-    public void Quit()
+    public void ExitGame()
     {
         Application.Quit();
+        Debug.Log("Exit App");
     }
 }

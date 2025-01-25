@@ -1,0 +1,25 @@
+caméra:
+vitesse de rotation
+2 modes > freeview (controlable a 360 degrés) / locked (regarde un point précis, le gameobject dans le player qui s'appelle "LookAt" donc il peut etre déplacé au besoin)
+
+player:
+move speed > vitesse de déplacement
+ground drag > friction avec le sol
+jump force > force du saut
+jump cooldown > cooldown avant prochain saut
+air multiplier > control du mouvement dans les air
+
++ matérial PM_Glide&Bounce > friction avec le sol et bounciness du personnage
+
+
+
+props préfab:
+prendre le prop et l'unpack dans la scène en 0 0 0
+mettre de coté le premier enfant et s'en servir comme base (holder)
+ajouter rigidbody avec les paramètres de base
+ajouter mesh collider + convex
+supprimer mesh renderer et mesh filter
+ajouter script "PropsHolder" + remplir settings
+ajouter tout les morceaux en enfant (fragments) + rigidbody en kinematic + mesh collider convex désactivé
+penser a rajouter layer ground au parent et tout les enfants si on veut pouvoir sauter dessus
+créer le préfab

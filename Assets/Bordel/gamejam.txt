@@ -13,13 +13,13 @@ air multiplier > control du mouvement dans les air
 
 
 
-props préfab: (obsolet)
+props préfab: (wip)
 prendre le prop et l'unpack dans la scène en 0 0 0
 mettre de coté le premier enfant et s'en servir comme base (holder)
 ajouter rigidbody avec les paramètres de base
 ajouter mesh collider + convex
-supprimer mesh renderer et mesh filter
+ajouter material
 ajouter script "PropsHolder" + remplir settings
-ajouter tout les morceaux en enfant (fragments) + rigidbody en kinematic + mesh collider convex désactivé
+ajouter tout les morceaux en enfant (fragments) + les désactiver
 penser a rajouter layer ground au parent et tout les enfants si on veut pouvoir sauter dessus
 créer le préfab

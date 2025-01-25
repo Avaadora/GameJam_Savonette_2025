@@ -10,11 +10,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float airMultiplier; // air control
 
     [Header("Références")]
+    [SerializeField] private Transform player;
     [SerializeField] private Transform playerOrientation;
     [SerializeField] private float playerHeight; // taille du joueur (mettre la valeur de scale y)
     [SerializeField] private LayerMask groundLayer; // layer du sol
     private bool canJump = true;
     private bool isGrounded = false;
+    private bool isWallFront = false;
 
     private float horizontalInput;
     private float verticalInput;
@@ -31,6 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         // ground check
         isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, groundLayer);
+        isWallFront = Physics.Raycast(player.position, player.forward, player.localScale.z / 2f + 0.2f);
 
         Inputs();
         SpeedControl();
@@ -41,7 +44,10 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move();
+        if (!isWallFront)
+        {
+            Move();
+        }
     }
 
     private void Inputs()

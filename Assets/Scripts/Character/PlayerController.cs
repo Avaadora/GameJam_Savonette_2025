@@ -49,14 +49,14 @@ public class PlayerController : MonoBehaviour
             Vector3 limitedVel = flatVel.normalized * _speed;
             _rigidbody.linearVelocity = new (limitedVel.x, _rigidbody.linearVelocity.y, limitedVel.z);
         }
-        //if (_isGrounded)
-        //{
-        //    _rigidbody.linearDamping = 5.0f;
-        //}
-        //else
-        //{
-        //    _rigidbody.linearDamping = 0.0f;
-        //}
+        if (_isGrounded)
+        {
+            _rigidbody.linearDamping = 5.0f;
+        }
+        else
+        {
+            _rigidbody.linearDamping = 0.0f;
+        }
 
         // application des forces
         _rigidbody.AddForce(_moveDirection.normalized * _speed, ForceMode.Force);

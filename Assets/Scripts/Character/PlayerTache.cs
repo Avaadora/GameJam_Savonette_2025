@@ -7,10 +7,14 @@ public class PlayerTache : MonoBehaviour
     [SerializeField] private GameObject myPrefab;
 
     private IEnumerator coroutine;
+    private Transform followTarget;
+    //[SerializeField] private PlayerController ourPlayerController;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //followTarget = transform;
+        //followTarget = ourPlayerController.transform;
         coroutine = WaitIAmInTheBathroom(2.0f);
         StartCoroutine(coroutine);
     }
@@ -23,9 +27,9 @@ public class PlayerTache : MonoBehaviour
 
     private IEnumerator WaitIAmInTheBathroom(float waitTime)
     {
-        var instance = Instantiate(myPrefab);
-        var instancePlaneObject = instance.GetComponent<DecalProjector>();           //Il faut trouver autre chose que NetworkObject
-        Instantiate(instancePlaneObject);
+        Instantiate(myPrefab);
+        //transform.position = followTarget.position;
         yield return new WaitForSeconds(waitTime);
+        StartCoroutine(coroutine);
     }
 }

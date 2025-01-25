@@ -77,5 +77,14 @@ public class louisOptions : MonoBehaviour
         }
     }
 
-
+    public void TickFullScreen(bool fullscreen)
+    {
+        if (fullscreen)
+        {
+            Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+        } else
+        {
+            Screen.fullScreenMode = FullScreenMode.Windowed;
+        }
+    }
 }

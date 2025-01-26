@@ -5,18 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/S_MainMenu.unity
     guid: bccff5093992c8047bb3de0d80497896
   - enabled: 1
-    path: Assets/Scenes/Quentin/S_Level01_Def.unity
-    guid: a66837fc7b4785443997e21432075d30
+    path: Assets/Scenes/S_Level01.unity
+    guid: 62ebc95dbd941ae458be3a0ed374ea09
   - enabled: 1
-    path: Assets/Scenes/Quentin/S_Level02_Def.unity
-    guid: fbdea61ad54d7bd4ea65e060b83ec010
+    path: Assets/Scenes/S_Level02.unity
+    guid: 544a0607df2651e4d9d873da2b740024
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

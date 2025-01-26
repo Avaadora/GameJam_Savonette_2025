@@ -9294,7 +9294,6 @@ MonoBehaviour:
   tutorialPanel: {fileID: 144380565}
   pausePanel: {fileID: 561992873}
   gameplayPanel: {fileID: 642290352}
-  optionPanel: {fileID: 8652306136392137987}
   endGamePanel: {fileID: 690471407}
   destroySlider: {fileID: 273512774}
   soapSlider: {fileID: 1390089642}
@@ -16415,7 +16414,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4103317720644981184}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.020697383, y: -0.000000029795713, z: -6.168255e-10, w: 0.9997858}
+  m_LocalRotation: {x: -0.020697383, y: -0.000000029795714, z: -6.168255e-10, w: 0.9997858}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

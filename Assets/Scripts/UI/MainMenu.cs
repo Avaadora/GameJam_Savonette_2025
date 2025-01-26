@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
     public void StartGame() // lance le premier level
     {
         audioManager.PlaySFX(audioManager.buttonUI);
-        SceneManager.LoadScene("S_Level01");
+        SceneManager.LoadScene("S_Level01_Def");
     }
 
     public void ExitGame() // ferme le jeu

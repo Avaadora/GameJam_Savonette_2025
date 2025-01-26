@@ -5684,7 +5684,6 @@ MonoBehaviour:
   tutorialPanel: {fileID: 144380565}
   pausePanel: {fileID: 561992873}
   gameplayPanel: {fileID: 642290352}
-  optionPanel: {fileID: 8652306136392137987}
   endGamePanel: {fileID: 690471407}
   destroySlider: {fileID: 273512774}
   soapSlider: {fileID: 1390089642}

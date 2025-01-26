@@ -16,7 +16,15 @@ public class PropsHolder : MonoBehaviour
             transform.GetChild(i).AddComponent<MeshCollider>();
             transform.GetChild(i).GetComponent<MeshCollider>().convex = true;
             transform.GetChild(i).AddComponent<Rigidbody>();
-            transform.GetChild(i).GetComponent<MeshRenderer>().material = transform.GetComponent<MeshRenderer>().material;
+
+            // change le matériau des fragments
+            MeshRenderer MR = transform.GetChild(i).GetComponent<MeshRenderer>();
+            Material[] materialList = new Material[MR.materials.Length];
+            for (int j = 0; j < MR.materials.Length; j++)
+            {
+                materialList[j] = transform.GetComponent<MeshRenderer>().material;
+            }
+            MR.materials = materialList;
         }
     }
 

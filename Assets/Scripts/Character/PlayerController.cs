@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+        // Audio Manager
+    private AudioManager audioManager;
+
     [Header("--- Player Settings ---")]
     [SerializeField] private float moveSpeed; // vitesse de mouvement
     [SerializeField] private float groundDrag; // friction avec le sol
@@ -9,7 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpCooldown; // cooldown avant de pouvoir de rejump
     [SerializeField] private float airMultiplier; // air control
 
-    [Header("Références")]
+    [Header("Rï¿½fï¿½rences")]
     [SerializeField] private Transform player;
     [SerializeField] private Transform playerOrientation;
     [SerializeField] private BoxCollider playerCollider;
@@ -24,10 +27,11 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection;
     private Rigidbody playerRigidbody;
 
-    
 
     private void Start()
     {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+
         playerRigidbody = GetComponent<Rigidbody>();
         playerRigidbody.freezeRotation = true;
     }
@@ -80,9 +84,10 @@ public class PlayerController : MonoBehaviour
             Invoke(nameof(ResetJump), jumpCooldown);
         }
     }
-
     private void Move()
     {
+        HandleWalkSound();
+
         // calcule la direction du mouvement
         moveDirection = playerOrientation.forward * verticalInput + playerOrientation.right * horizontalInput;
 
@@ -101,7 +106,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 flatVel = new(playerRigidbody.linearVelocity.x, 0f, playerRigidbody.linearVelocity.z);
 
-        // limite la vélocité
+        // limite la vï¿½locitï¿½
         if(flatVel.magnitude > moveSpeed)
         {
             Vector3 limitedVel = flatVel.normalized * moveSpeed;
@@ -111,13 +116,30 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
+        audioManager.PlaySFX(audioManager.jump);
+
         playerRigidbody.linearVelocity = new Vector3(playerRigidbody.linearVelocity.x, 0f, playerRigidbody.linearVelocity.z);
         playerRigidbody.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
+
     private void ResetJump()
     {
         canJump = true;
     }
 
+   private void HandleWalkSound()
+    {
+        if ((Mathf.Abs(horizontalInput) > 0.1f || Mathf.Abs(verticalInput) > 0.1f) && isGrounded)
+        {
+            if (!audioManager.sfxSource.isPlaying)
+            {
+                audioManager.PlayWalkSound();
+            }
+        }
+        else
+        {
+            audioManager.StopWalkSound();
+        }
+    }
     
 }

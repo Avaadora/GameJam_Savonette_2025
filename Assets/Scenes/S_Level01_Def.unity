@@ -1160,7 +1160,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &173087349
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8628,6 +8628,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3072294389675774806, guid: 20d72f82de299cb42ac48bcecf42888c, type: 3}
+      propertyPath: jump
+      value: 
+      objectReference: {fileID: 8300000, guid: 6e03688913d11cb41b6146559dc06a1e, type: 3}
+    - target: {fileID: 3072294389675774806, guid: 20d72f82de299cb42ac48bcecf42888c, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 8300000, guid: d0586c63fe328d3408ecbff174d3b236, type: 3}
+    - target: {fileID: 3072294389675774806, guid: 20d72f82de299cb42ac48bcecf42888c, type: 3}
+      propertyPath: slide
+      value: 
+      objectReference: {fileID: 8300000, guid: cd9b06dd1281da14f84b7b550f604b38, type: 3}
+    - target: {fileID: 3072294389675774806, guid: 20d72f82de299cb42ac48bcecf42888c, type: 3}
+      propertyPath: buttonUI
+      value: 
+      objectReference: {fileID: 8300000, guid: 9d4ba42525b312545b30badbc671d90a, type: 3}
+    - target: {fileID: 3072294389675774806, guid: 20d72f82de299cb42ac48bcecf42888c, type: 3}
+      propertyPath: mainMenu
+      value: 
+      objectReference: {fileID: 8300000, guid: a18f49b663845f94eaf5b2edb270bbf9, type: 3}
+    - target: {fileID: 3072294389675774806, guid: 20d72f82de299cb42ac48bcecf42888c, type: 3}
+      propertyPath: mainTheme
+      value: 
+      objectReference: {fileID: 8300000, guid: d0586c63fe328d3408ecbff174d3b236, type: 3}
     - target: {fileID: 5360290001401190799, guid: 20d72f82de299cb42ac48bcecf42888c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -12857,7 +12881,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134761268785420481}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.04920446, y: 0.000000023240746, z: -0.0000000011449354, w: 0.9987887}
+  m_LocalRotation: {x: 0.04920446, y: 0.000000023240746, z: -0.0000000011449353, w: 0.9987888}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

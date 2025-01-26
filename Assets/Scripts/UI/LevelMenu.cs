@@ -21,6 +21,8 @@ public class LevelMenu : MonoBehaviour
     [SerializeField] private GameObject star03;
 
     private GameManager gameManager;
+    private AudioManager audioManager;
+     
 
 
     private void Start()
@@ -30,6 +32,9 @@ public class LevelMenu : MonoBehaviour
         Cursor.visible = true;
 
         gameManager = GameManager.Instance;
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+
+        audioManager.LoadMusic();
     }
 
     private void Update()
@@ -92,6 +97,7 @@ public class LevelMenu : MonoBehaviour
 
     public void StartGame()
     {
+        audioManager.PlaySFX(audioManager.buttonUI);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Time.timeScale = 1f;
@@ -101,6 +107,7 @@ public class LevelMenu : MonoBehaviour
 
     public void Resume()
     {
+        audioManager.PlaySFX(audioManager.buttonUI);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Time.timeScale = 1f;
@@ -126,12 +133,14 @@ public class LevelMenu : MonoBehaviour
 
     public void MainMenu()
     {
+        audioManager.PlaySFX(audioManager.buttonUI);
         Resume();
         SceneManager.LoadScene("S_MainMenu_Def");
     }
 
     public void NextLevel()
     {
+        audioManager.PlaySFX(audioManager.buttonUI);
         SceneManager.LoadScene("S_Level02_Def");
     }
 }

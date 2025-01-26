@@ -1,22 +1,42 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
     [Header("Audio Source")]
-    [SerializeField] private AudioSource musicSource;
-    [SerializeField] private AudioSource sfxSource;
+    public AudioSource musicSource, sfxSource, MainTheme;
+
 
     [Header("Audio Clips")]
-    [SerializeField] private AudioClip music;
+    public AudioClip mainTheme, mainMenu, jump, slide, buttonUI;
 
     void Start()
     {
-        musicSource.clip = music;
-        musicSource.Play();
+        LoadMusic();
     }
 
     public void PlaySFX(AudioClip sfx)
     {
         sfxSource.PlayOneShot(sfx);
+    }
+    
+    public void PlayWalkSound()
+    {
+        if (!MainTheme.isPlaying)
+        {
+            MainTheme.clip = slide;
+            MainTheme.loop = true; // Boucle le son de marche
+            MainTheme.Play();
+        }
+    }
+
+    public void LoadMusic(){
+        MainTheme.clip = mainTheme;
+        MainTheme.Play();
+    }
+
+    public void StopWalkSound()
+    {
+        sfxSource.Stop();
     }
 }

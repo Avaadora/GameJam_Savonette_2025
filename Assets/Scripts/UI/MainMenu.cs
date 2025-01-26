@@ -3,20 +3,28 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+
+    private AudioManager audioManager;
+
     private void Start()
     {
-        // actualise l'état du curseur
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        audioManager.LoadMusic();
+
+        // actualise l'ï¿½tat du curseur
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
 
     public void StartGame() // lance le premier level
     {
+        audioManager.PlaySFX(audioManager.buttonUI);
         SceneManager.LoadScene("S_Level01_Def");
     }
 
     public void ExitGame() // ferme le jeu
     {
+        audioManager.PlaySFX(audioManager.buttonUI);
         Application.Quit();
         Debug.Log("Exit App");
     }

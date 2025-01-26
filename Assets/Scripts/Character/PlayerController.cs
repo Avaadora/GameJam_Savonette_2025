@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float playerHeight; // taille du joueur (mettre la valeur de scale y)
     [SerializeField] private LayerMask groundLayer; // layer du sol
     private bool canJump = true;
-    private bool isGrounded = false;
+    [HideInInspector] public bool isGrounded = false;
     private bool isWallFront = false;
 
     private float horizontalInput;
@@ -44,6 +44,12 @@ public class PlayerController : MonoBehaviour
         playerRigidbody.linearDamping = isGrounded ? groundDrag : 0f;
 
         Grounded();
+
+        if ((Input.GetAxisRaw("Horizontal") != 0f || Input.GetAxisRaw("Vertical") != 0f) && transform.localScale.x > 0.25f)
+        {
+            transform.localScale -= 0.25f / GameManager.Instance.soapTime * Time.deltaTime * Vector3.one;
+        }
+
     }
 
     private void Grounded() // ground check

@@ -21,6 +21,8 @@ public class LevelMenu : MonoBehaviour
     [SerializeField] private GameObject star03;
 
     private GameManager gameManager;
+    private AudioManager audioManager;
+     
 
 
     private void Start()
@@ -30,13 +32,16 @@ public class LevelMenu : MonoBehaviour
         Cursor.visible = true;
 
         gameManager = GameManager.Instance;
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+
+        audioManager.LoadMusic();
     }
 
     private void Update()
     {
         destroySlider.value = (float)gameManager.destroyedObjectsNumber / (float)gameManager.destroyableObjectsNumber;
         soapSlider.value = 1f - gameManager.time / gameManager.soapTime;
-        if (SceneManager.GetActiveScene().name != "S_Level02" || Input.GetAxis("Horizontal") != 0 && Input.GetAxis("Vertical") != 0)
+        if (SceneManager.GetActiveScene().name != "S_Level02_Def" && Input.GetAxis("Horizontal") != 0 && Input.GetAxis("Vertical") != 0)
         {
             gameManager.time += Time.deltaTime;
         }
@@ -92,6 +97,7 @@ public class LevelMenu : MonoBehaviour
 
     public void StartGame()
     {
+        audioManager.PlaySFX(audioManager.buttonUI);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Time.timeScale = 1f;
@@ -101,6 +107,7 @@ public class LevelMenu : MonoBehaviour
 
     public void Resume()
     {
+        audioManager.PlaySFX(audioManager.buttonUI);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Time.timeScale = 1f;
@@ -126,12 +133,14 @@ public class LevelMenu : MonoBehaviour
 
     public void MainMenu()
     {
+        audioManager.PlaySFX(audioManager.buttonUI);
         Resume();
-        SceneManager.LoadScene("S_MainMenu");
+        SceneManager.LoadScene("S_MainMenu_Def");
     }
 
     public void NextLevel()
     {
-        SceneManager.LoadScene("S_Level02");
+        audioManager.PlaySFX(audioManager.buttonUI);
+        SceneManager.LoadScene("S_Level02_Def");
     }
 }

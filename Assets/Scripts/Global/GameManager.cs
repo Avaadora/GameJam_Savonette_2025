@@ -25,10 +25,4 @@ public class GameManager : MonoBehaviour
         resultatMax = objectBrokenable.Count * pointsPerObject.Count;
         unCalculeScore.SetResultatsMax(resultatMax);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

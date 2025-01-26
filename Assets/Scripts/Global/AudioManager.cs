@@ -22,17 +22,17 @@ public class AudioManager : MonoBehaviour
     
     public void PlayWalkSound()
     {
-        if (!MainTheme.isPlaying)
+        if (!musicSource.isPlaying)
         {
-            MainTheme.clip = slide;
-            MainTheme.loop = true; // Boucle le son de marche
-            MainTheme.Play();
+            musicSource.clip = slide;
+            musicSource.loop = true; // Boucle le son de marche
+            musicSource.Play();
         }
     }
 
     public void LoadMusic(){
-        MainTheme.clip = mainTheme;
-        MainTheme.Play();
+        musicSource.clip = mainTheme;
+        musicSource.Play();
     }
 
     public void StopWalkSound()

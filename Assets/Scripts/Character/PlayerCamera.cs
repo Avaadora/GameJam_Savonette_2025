@@ -23,13 +23,6 @@ public class PlayerCamera : MonoBehaviour
     [SerializeField] private GameObject freeviewCamera;
     [SerializeField] private GameObject lockedCamera;
 
-
-    private void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
-
     private void Update()
     {
         // change l'orientation du player

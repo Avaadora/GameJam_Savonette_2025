@@ -7,8 +7,12 @@ public class PropsHolder : MonoBehaviour
     [SerializeField] private float forceMin; // force min à appliquer aléatoirement sur les fragments
     [SerializeField] private float forceMax; // force max à appliquer aléatoirement sur les fragments
 
+    private GameManager gameManager;
+
     private void Start()
     {
+        gameManager = GameManager.Instance;
+        gameManager.destroyableObjectsNumber += 1;
         for (int i = 0; i < transform.childCount; i++)
         {
             // ajoute le script lié aux fragments, automatiquement à tout les fragments enfants + tout ce qu'il a besoin pour collisionner
@@ -47,6 +51,7 @@ public class PropsHolder : MonoBehaviour
                 transform.GetChild(i).GetComponent<PropsFragment>().InitializeFragment();
                 transform.GetChild(i).parent = null;
             }
+            gameManager.destroyedObjectsNumber += 1;
             Destroy(gameObject); // destroy cet objet quand il a plus de fragments attachés pour opti
         }
     }

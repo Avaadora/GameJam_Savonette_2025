@@ -24,7 +24,7 @@ penser a rajouter layer ground au parent et tout les enfants si on veut pouvoir 
 créer le préfab
 
 
-
+- level design
 - trouver une autre texture de sol (tile mieux et réagis moins avec l'outline)
 - importer le modèle 3D du chara + polish le controller + bubbles + trail + decal + scale de la savounette avec le temps + explosion de bulles à la fin du niveau?
 - importer nouveaux props unbreackable & breackable

@@ -2559,6 +2559,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2180862691132700555, guid: 300393ef90dd2f341b59f0ddf213ad9e, type: 3}
   m_PrefabInstance: {fileID: 266677944}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &266677947 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3847739219010686936, guid: 300393ef90dd2f341b59f0ddf213ad9e, type: 3}
+  m_PrefabInstance: {fileID: 266677944}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &266677948 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5264237180558341294, guid: 300393ef90dd2f341b59f0ddf213ad9e, type: 3}
+  m_PrefabInstance: {fileID: 266677944}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &266677949 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 7542433109565295812, guid: 300393ef90dd2f341b59f0ddf213ad9e, type: 3}
+  m_PrefabInstance: {fileID: 266677944}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &270252460 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3651274024787335172, guid: 60b676057fe7cda4fb349224630ee93d, type: 3}
@@ -14069,7 +14084,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4103317720644981184}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.020697383, y: 4.8718107e-25, z: 1.0085534e-26, w: 0.9997858}
+  m_LocalRotation: {x: -0.020697383, y: 4.871807e-25, z: 1.0085527e-26, w: 0.9997858}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14534,11 +14549,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 4
   currentStyle: 0
-  player: {fileID: 0}
-  playerMesh: {fileID: 0}
-  playerRigidbody: {fileID: 0}
-  playerOrientation: {fileID: 0}
-  lookAt: {fileID: 0}
+  player: {fileID: 266677946}
+  playerMesh: {fileID: 266677947}
+  playerRigidbody: {fileID: 266677949}
+  playerOrientation: {fileID: 266677948}
+  lookAt: {fileID: 266677945}
   freeviewCamera: {fileID: 8536837005869845508}
   lockedCamera: {fileID: 4382696650197814437}
 --- !u!114 &5006413442060343937

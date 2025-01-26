@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7416117736182858309}
   - component: {fileID: 2928660359562388305}
   - component: {fileID: 3680206604016316709}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BP_Etagere03_Colored_Unbreakable
   m_TagString: Untagged
   m_Icon: {fileID: 0}

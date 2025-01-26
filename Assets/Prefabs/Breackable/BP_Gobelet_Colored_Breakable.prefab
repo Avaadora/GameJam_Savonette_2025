@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8967081166728411309}
   - component: {fileID: 4944642198634555341}
   - component: {fileID: 5243394906445527559}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Gobelet_Colored_Breakable_cell.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 1939250595573101946}
   - component: {fileID: 6683742080536366299}
   - component: {fileID: 8529213323134845767}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Gobelet_Colored_Breakable_cell.011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 7489313673422733514}
   - component: {fileID: 72066801038591686}
   - component: {fileID: 3524735100347828705}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BP_Gobelet_Colored_Breakable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 120190341556237327}
   - component: {fileID: 8556513122937110512}
   - component: {fileID: 95451139371254887}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Gobelet_Colored_Breakable_cell.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 2855021101250600800}
   - component: {fileID: 5821922975651424934}
   - component: {fileID: 7365606988529079665}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Gobelet_Colored_Breakable_cell.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -528,7 +528,7 @@ GameObject:
   - component: {fileID: 6355308425925957617}
   - component: {fileID: 4965097635672478270}
   - component: {fileID: 2136816644016570800}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Gobelet_Colored_Breakable_cell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -615,7 +615,7 @@ GameObject:
   - component: {fileID: 7121208402416797284}
   - component: {fileID: 5089779500685886045}
   - component: {fileID: 5563450328920838397}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Gobelet_Colored_Breakable_cell.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -703,7 +703,7 @@ GameObject:
   - component: {fileID: 536146789773403045}
   - component: {fileID: 710994014297810275}
   - component: {fileID: 8854825822104029209}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Gobelet_Colored_Breakable_cell.013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -790,7 +790,7 @@ GameObject:
   - component: {fileID: 1690267567491154359}
   - component: {fileID: 8533116877381889478}
   - component: {fileID: 5782040714143034860}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Gobelet_Colored_Breakable_cell.012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -878,7 +878,7 @@ GameObject:
   - component: {fileID: 7285486685627141426}
   - component: {fileID: 5031325635527246747}
   - component: {fileID: 1923194974955048090}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Gobelet_Colored_Breakable_cell.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -965,7 +965,7 @@ GameObject:
   - component: {fileID: 6284939792314742480}
   - component: {fileID: 799223174373319728}
   - component: {fileID: 1105840172924082506}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Gobelet_Colored_Breakable_cell.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1053,7 +1053,7 @@ GameObject:
   - component: {fileID: 4536940189194875339}
   - component: {fileID: 2254638606501958928}
   - component: {fileID: 8650806161616357821}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Gobelet_Colored_Breakable_cell.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1141,7 +1141,7 @@ GameObject:
   - component: {fileID: 1603802302068764479}
   - component: {fileID: 1960054667540716956}
   - component: {fileID: 5694945232775538317}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Gobelet_Colored_Breakable_cell.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1228,7 +1228,7 @@ GameObject:
   - component: {fileID: 655187541783407754}
   - component: {fileID: 8154686551960240509}
   - component: {fileID: 329103185508679486}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Gobelet_Colored_Breakable_cell.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1315,7 +1315,7 @@ GameObject:
   - component: {fileID: 7324222663009753628}
   - component: {fileID: 8244536360403963489}
   - component: {fileID: 2927823395576141807}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Gobelet_Colored_Breakable_cell.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}

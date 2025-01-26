@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2833045067761942228}
   - component: {fileID: 1087268241632786782}
   - component: {fileID: 2782782334073359888}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Bol_Colored_Breakable_cell.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4652008787269882533}
   - component: {fileID: 6439600332464256734}
   - component: {fileID: 8267477552606276943}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Bol_Colored_Breakable_cell.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 8276708577610272401}
   - component: {fileID: 2797474083867414335}
   - component: {fileID: 1818249186605607600}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Bol_Colored_Breakable_cell.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 4791767060123306695}
   - component: {fileID: 155203480106826688}
   - component: {fileID: 1719937122469299965}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Bol_Colored_Breakable_cell.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 3597694361709887442}
   - component: {fileID: 8079016883507442335}
   - component: {fileID: 5654121078539195673}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Bol_Colored_Breakable_cell.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 4095360804639089072}
   - component: {fileID: 5978135540464961965}
   - component: {fileID: 2984383297670841328}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Bol_Colored_Breakable_cell.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,7 +530,7 @@ GameObject:
   - component: {fileID: 9118237773896853321}
   - component: {fileID: 8691078395615713978}
   - component: {fileID: 5260097748510832817}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BP_Bol_Colored_Breakable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -690,7 +690,7 @@ GameObject:
   - component: {fileID: 2492584499526048553}
   - component: {fileID: 3799736422878124511}
   - component: {fileID: 1463340415682390441}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Bol_Colored_Breakable_cell.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -776,7 +776,7 @@ GameObject:
   - component: {fileID: 2056976416560232812}
   - component: {fileID: 1507552356714866816}
   - component: {fileID: 5497305868297649331}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Bol_Colored_Breakable_cell.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -862,7 +862,7 @@ GameObject:
   - component: {fileID: 4708713984209246849}
   - component: {fileID: 3984954529770168856}
   - component: {fileID: 2118913647988720963}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Bol_Colored_Breakable_cell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -948,7 +948,7 @@ GameObject:
   - component: {fileID: 6324724144256237074}
   - component: {fileID: 1322186088730352620}
   - component: {fileID: 7600321237911775990}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Bol_Colored_Breakable_cell.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1034,7 +1034,7 @@ GameObject:
   - component: {fileID: 7910540513813249092}
   - component: {fileID: 643074419523651216}
   - component: {fileID: 5861803106723501613}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: P_Bol_Colored_Breakable_cell.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}

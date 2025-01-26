@@ -7,8 +7,12 @@ public class PropsHolder : MonoBehaviour
     [SerializeField] private float forceMin; // force min à appliquer aléatoirement sur les fragments
     [SerializeField] private float forceMax; // force max à appliquer aléatoirement sur les fragments
 
+    private GameManager gameManager;
+
     private void Start()
     {
+        gameManager = GameManager.Instance;
+        gameManager.destroyableObjectsNumber += 1;
         for (int i = 0; i < transform.childCount; i++)
         {
             // ajoute le script lié aux fragments, automatiquement à tout les fragments enfants + tout ce qu'il a besoin pour collisionner
@@ -16,7 +20,15 @@ public class PropsHolder : MonoBehaviour
             transform.GetChild(i).AddComponent<MeshCollider>();
             transform.GetChild(i).GetComponent<MeshCollider>().convex = true;
             transform.GetChild(i).AddComponent<Rigidbody>();
-            transform.GetChild(i).GetComponent<MeshRenderer>().material = transform.GetComponent<MeshRenderer>().material;
+
+            // change le matériau des fragments
+            MeshRenderer MR = transform.GetChild(i).GetComponent<MeshRenderer>();
+            Material[] materialList = new Material[MR.materials.Length];
+            for (int j = 0; j < MR.materials.Length; j++)
+            {
+                materialList[j] = transform.GetComponent<MeshRenderer>().material;
+            }
+            MR.materials = materialList;
         }
     }
 
@@ -39,6 +51,7 @@ public class PropsHolder : MonoBehaviour
                 transform.GetChild(i).GetComponent<PropsFragment>().InitializeFragment();
                 transform.GetChild(i).parent = null;
             }
+            gameManager.destroyedObjectsNumber += 1;
             Destroy(gameObject); // destroy cet objet quand il a plus de fragments attachés pour opti
         }
     }

@@ -8,18 +8,29 @@ ground drag > friction avec le sol
 jump force > force du saut
 jump cooldown > cooldown avant prochain saut
 air multiplier > control du mouvement dans les air
-
 + matérial PM_Glide&Bounce > friction avec le sol et bounciness du personnage
 
+Caméras + Player /!\ Composants à bien linker (normalement assez bien nomé entre composant et variable)
 
 
-props préfab: (obsolet)
-prendre le prop et l'unpack dans la scène en 0 0 0
-mettre de coté le premier enfant et s'en servir comme base (holder)
+props préfab:
+prendre le prop entier pour s'en servir comme base (holder)
 ajouter rigidbody avec les paramètres de base
 ajouter mesh collider + convex
-supprimer mesh renderer et mesh filter
-ajouter script "PropsHolder" + remplir settings
-ajouter tout les morceaux en enfant (fragments) + rigidbody en kinematic + mesh collider convex désactivé
+ajouter material
+ajouter script "PropsHolder" + remplir settings (5 / 20 c'est pas mal)
+ajouter tout les morceaux en enfant (fragments) + les désactiver
 penser a rajouter layer ground au parent et tout les enfants si on veut pouvoir sauter dessus
 créer le préfab
+
+
+
+- trouver une autre texture de sol (tile mieux et réagis moins avec l'outline)
+- importer le modèle 3D du chara + polish le controller + bubbles + trail + decal + scale de la savounette avec le temps + explosion de bulles à la fin du niveau?
+- importer nouveaux props unbreackable & breackable
+- polish l'UI (elle est utilisable mais moche) + créer prefab du menu options pour le répliquer dans les autres scènes + linker 2/3 particularités pas opti en code dans les scènes
+- implémenter les sfx
+
+- feedback pour un peu tout
+- animer le chara
+- vertex painting

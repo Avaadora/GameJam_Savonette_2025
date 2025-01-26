@@ -36,7 +36,7 @@ public class LevelMenu : MonoBehaviour
     {
         destroySlider.value = (float)gameManager.destroyedObjectsNumber / (float)gameManager.destroyableObjectsNumber;
         soapSlider.value = 1f - gameManager.time / gameManager.soapTime;
-        if (SceneManager.GetActiveScene().name != "S_Level02_Def" && Input.GetAxis("Horizontal") != 0 && Input.GetAxis("Vertical") != 0)
+        if (SceneManager.GetActiveScene().name != "S_Level02_Def" || Input.GetAxis("Horizontal") != 0 && Input.GetAxis("Vertical") != 0)
         {
             gameManager.time += Time.deltaTime;
         }
@@ -127,11 +127,11 @@ public class LevelMenu : MonoBehaviour
     public void MainMenu()
     {
         Resume();
-        SceneManager.LoadScene("S_MainMenu_Def");
+        SceneManager.LoadScene("S_MainMenu");
     }
 
     public void NextLevel()
     {
-        SceneManager.LoadScene("S_Level02_Def");
+        SceneManager.LoadScene("S_Level02");
     }
 }

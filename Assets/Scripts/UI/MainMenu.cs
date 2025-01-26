@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame() // lance le premier level
     {
-        SceneManager.LoadScene("S_Level01_Def");
+        SceneManager.LoadScene("S_Level01");
     }
 
     public void ExitGame() // ferme le jeu

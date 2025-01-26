@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [Header("Références")]
     [SerializeField] private Transform player;
     [SerializeField] private Transform playerOrientation;
+    [SerializeField] private BoxCollider playerCollider;
     [SerializeField] private float playerHeight; // taille du joueur (mettre la valeur de scale y)
     [SerializeField] private LayerMask groundLayer; // layer du sol
     private bool canJump = true;
@@ -34,32 +35,45 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         // ground check
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, groundLayer);
-        isWallFront = Physics.Raycast(player.position, player.forward, player.localScale.z / 2f + 0.2f);
+        // isWallFront = Physics.Raycast(player.position, player.forward, player.localScale.z / 2f + 0.2f);
 
         Inputs();
         SpeedControl();
 
         // change la friction entre sol et air
         playerRigidbody.linearDamping = isGrounded ? groundDrag : 0f;
+
+        Grounded();
+    }
+
+    private void Grounded() // ground check
+    {
+        Vector3 boxCenter = playerCollider.bounds.center;
+        Vector3 halfExtents = playerCollider.bounds.extents;
+
+        halfExtents.y = 0.025f;
+
+        float maxDistance = playerCollider.bounds.extents.y;
+
+        isGrounded = Physics.BoxCast(boxCenter, halfExtents, Vector3.down, transform.rotation, maxDistance, groundLayer);
     }
 
     private void FixedUpdate()
     {
-        if (!isWallFront)
-        {
-            Move();
-        }
+        Move();
     }
 
     private void Inputs()
     {
         // inputs de move
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
+        if (!isWallFront)
+        {
+            horizontalInput = Input.GetAxisRaw("Horizontal");
+            verticalInput = Input.GetAxisRaw("Vertical");
+        }
 
         // conditions pour sauter
-        if(Input.GetButton("Jump") && canJump && isGrounded)
+        if (Input.GetButton("Jump") && canJump && isGrounded)
         {
             canJump = false;
             Jump();

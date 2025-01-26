@@ -8,8 +8,7 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] private AudioMixer _mixer;
     [SerializeField] private Slider _musicSlider;
     [SerializeField] private Slider _sfxSlider;
-    private float _musicLastValue;
-    private float _sfxLastValue;
+    private bool fullscreen = true;
 
     private void Start()
     {
@@ -31,27 +30,26 @@ public class OptionsMenu : MonoBehaviour
     public void LoadVolume() // charge les paramètres de volume
     {
         _musicSlider.value = PlayerPrefs.GetFloat("musicVolume");
-        _musicLastValue = _musicSlider.value;
         _sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume");
-        _sfxLastValue = _sfxSlider.value;
     }
 
     public void ChangeMusicVolume() // change le volume de la musique
     {
         float volume = _musicSlider.value;
-        _mixer.SetFloat("Music", Mathf.Log10(volume) * 20);
+        _mixer.SetFloat("music", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat("musicVolume", volume);
     }
 
     public void ChangeSFXVolume() // change le volume des sfx
     {
         float volume = _sfxSlider.value;
-        _mixer.SetFloat("SFX", Mathf.Log10(volume) * 20);
+        _mixer.SetFloat("sfx", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat("sfxVolume", volume);
     }
 
-    public void FullscreenToogle(bool fullscreen) // change le mode fullscreen du jeu
+    public void FullscreenToogle() // change le mode fullscreen du jeu
     {
+        fullscreen = !fullscreen;
         Screen.fullScreenMode = fullscreen ? FullScreenMode.ExclusiveFullScreen : FullScreenMode.Windowed;
     }
 }

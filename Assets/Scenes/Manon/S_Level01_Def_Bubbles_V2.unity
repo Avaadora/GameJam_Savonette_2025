@@ -5357,8 +5357,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a52757d9c534244cb2f6f2a3f244310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1690981322913827187}
-  offset: {x: 2, y: 0, z: 0}
 --- !u!1 &321076699
 GameObject:
   m_ObjectHideFlags: 0
@@ -10563,8 +10561,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a52757d9c534244cb2f6f2a3f244310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1690981322913827187}
-  offset: {x: 2, y: 0, z: 0}
 --- !u!1 &828933969
 GameObject:
   m_ObjectHideFlags: 0
@@ -16727,8 +16723,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a52757d9c534244cb2f6f2a3f244310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1690981322913827187}
-  offset: {x: 2, y: 0, z: 0}
 --- !u!1 &1588739241
 GameObject:
   m_ObjectHideFlags: 0
@@ -16980,7 +16974,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d5fc9202512ce83479859887d8d60d6e, type: 2}
+  - {fileID: 2100000, guid: 92ac4382e574f3543979e5481f52b642, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18721,6 +18715,7 @@ MonoBehaviour:
   airMultiplier: 0.4
   player: {fileID: 0}
   playerOrientation: {fileID: 4044149534144069491}
+  playerCollider: {fileID: 0}
   playerHeight: 1
   groundLayer:
     serializedVersion: 2
@@ -19759,7 +19754,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92fd1985661436b429dcc7bb1ec516f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pausePanel: {fileID: 101530478}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

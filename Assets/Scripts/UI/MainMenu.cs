@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+
     [SerializeField] private AudioMixer _mixer;
     [SerializeField] private Slider _musicSlider;
     [SerializeField] private Slider _sfxSlider;

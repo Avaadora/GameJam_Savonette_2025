@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CalculeScore : MonoBehaviour
+public class CalculeScoreV2 : MonoBehaviour
 {
     public GameManager unManager;
 

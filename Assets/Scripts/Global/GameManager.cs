@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private CalculeScore unCalculeScore;
+    private CalculeScoreV2 unCalculeScore;
 
     public List<int> pointsPerObject = new List<int>();
     public List<int> objectBrokenable = new List<int>();

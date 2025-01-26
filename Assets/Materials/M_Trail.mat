@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_SG_trail
+  m_Name: M_Trail
   m_Shader: {fileID: -6465566751694194690, guid: 375e4f3610823f24a83a95cd41075046, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
